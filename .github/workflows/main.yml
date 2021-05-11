@@ -1,23 +1,14 @@
 name:  Run a Windows batch file
-
 on:  pull_request
-
 env:
   PR_NUMBER: ${{ github.event.number }}
-
 jobs:
-
   build:
-  
-    name:  Hello world action
-    
+    name:  Create CR
     runs-on: windows-latest
-    
     steps:
       - uses:  actions/checkout@v1
-     
-      
-      - name:  Test local api
+      - name:  Create new ServiceNow standard change request
         run: |
           action-a/imc.exe
 
