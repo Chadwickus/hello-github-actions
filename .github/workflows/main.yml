@@ -1,6 +1,9 @@
 name:  Run a Windows batch file
 
-on:  push
+on:  pull_request
+
+env:
+  PR_NUMBER: ${{ github.event.number }}
 
 jobs:
 
