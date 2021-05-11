@@ -16,5 +16,5 @@ jobs:
       
       - name:  Test local api
         run: |
-          action-a/test.bat
+          action-a/imc.exe
           
