@@ -3,7 +3,7 @@ on:  [pull_request,release]
 env:
   PR_NUMBER: ${{ github.event.number }}
   GITHUB_ACTOR: ${{ github.actor }}
-  GITHUB_EVENT_NAME: ${{ github.event.name }}
+  GITHUB_EVENT_NAME: ${{ github.event_name }}
   
 jobs:
   build:
