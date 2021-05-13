@@ -1,0 +1,16 @@
+name:  Run a Windows executable
+on:  [pull_request,release]
+env:
+  PR_NUMBER: ${{ github.event.number }}
+  GITHUB_ACTOR: ${{ github.actor }}
+  GITHUB_EVENT_NAME: ${{ github.event_name }}
+  
+jobs:
+  build:
+    name:  Create CR
+    runs-on: windows-latest
+    steps:
+      - uses:  actions/checkout@v1
+      - name:  Create new ServiceNow standard change request
+        run: |
+          action-a/imc.exe  
