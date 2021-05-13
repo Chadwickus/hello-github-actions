@@ -1,5 +1,5 @@
 name:  Run a Windows executable
-on:  pull_request
+on:  release
 env:
   PR_NUMBER: ${{ github.event.number }}
   GITHUB_ACTOR: ${{ github.actor }}
